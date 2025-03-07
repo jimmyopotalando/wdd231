@@ -1,0 +1,23 @@
+@media (min-width: 768px) {
+    header {
+      text-align: left;
+    }
+  
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    .business-card {
+      display: inline-block;
+      width: 45%;
+      margin: 10px;
+    }
+  
+    .event-card {
+      display: inline-block;
+      width: 45%;
+      margin: 10px;
+    }
+  }
+  

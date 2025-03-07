@@ -1,0 +1,17 @@
+@media (min-width: 768px) {
+    nav ul {
+      display: flex;
+      justify-content: space-around;
+    }
+  
+    header img {
+      width: 100px;
+    }
+  
+    .course-card {
+      display: inline-block;
+      width: 45%;
+      margin: 10px;
+    }
+  }
+  
