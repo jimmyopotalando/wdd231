@@ -1,11 +1,11 @@
 // Example array of courses
 const courses = [
-    { name: 'CSE 110', completed: true },
-    { name: 'WDD 130', completed: true },
-    { name: 'CSE 111', completed: true },
-    { name: 'WDD 131', completed: true },
-    { name: 'CSE 210', completed: false },
-    { name: 'WDD 231', completed: false }
+    { name: 'CSE 110', completed: true, credits: 3 },
+    { name: 'WDD 130', completed: true, credits: 3 },
+    { name: 'CSE 111', completed: true, credits: 3 },
+    { name: 'WDD 131', completed: true, credits: 3 },
+    { name: 'CSE 210', completed: false, credits: 3 },
+    { name: 'WDD 231', completed: false, credits: 3 }
 ];
 
 // Function to display courses dynamically
@@ -18,7 +18,7 @@ const displayCourses = (filter = 'all') => {
     filteredCourses.forEach(course => {
         const courseElement = document.createElement('div');
         courseElement.classList.add(course.completed ? 'completed' : 'not-completed');
-        courseElement.textContent = course.name;
+        courseElement.textContent = `${course.name} (${course.credits} credits)`;
         courseList.appendChild(courseElement);
     });
 };
@@ -30,3 +30,7 @@ document.getElementById('wdd-courses').addEventListener('click', () => displayCo
 
 // Initially display all courses
 displayCourses('all');
+
+const totalCredits = filteredCourses.reduce((total, course) => total + course.credits, 0);
+document.getElementById('total-credits').textContent = `Total Credits: ${totalCredits}`;
+

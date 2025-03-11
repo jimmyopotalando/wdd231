@@ -5,7 +5,7 @@ body {
 }
 
 header {
-    background-color: blue;
+    background-color: #1f3a68;  /* Navy blue */
     color: white;
     display: flex;
     justify-content: space-between;
@@ -31,19 +31,47 @@ nav a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-}
-
-footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 20px;
-}
-
-button {
-    background-color: black;
-    color: white;
     padding: 10px;
-    margin: 5px;
-    border: none;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #81b3d3;  /* Light blue */
+    border-radius: 5px;
+}
+
+/* Mobile Hamburger Menu */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #ccc;
+    }
 }

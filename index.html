@@ -5,7 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Course Home Page for Jimmy Opot Alando">
     <meta name="author" content="Jimmy Opot Alando">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Reference JavaScript files in the head with defer -->
+     <script src="navigation.js" defer></script>
+     <script src="date.js" defer></script>
+     <script src="course.js" defer></script>
+ </head>
     <title>Course Home Page</title>
+
     <!-- Link to Normalize CSS -->
     <link rel="stylesheet" href="normalize.css">
     <!-- Link to Small Screen CSS -->
@@ -16,10 +23,7 @@
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
 
-    <!-- JavaScript files - using defer for non-blocking -->
-    <script src="navigation.js" defer></script>
-    <script src="date.js" defer></script>
-    <script src="course.js" defer></script>
+    
 
     <style>
         /* Basic Reset */
@@ -240,8 +244,10 @@
     </nav>
 
     <!-- Main Content -->
-    <section class="main-content">
-        <div class="course-work">
+    <main class="main-content">
+        <h1>Home</h1>
+        
+        <section class="course-work">
             <div class="courses-list">
                 <h2>Course Work</h2>
                 <ul>
@@ -257,20 +263,17 @@
                 <h2>Nairobi, Kenya</h2>
                 <img src="giraffe.jpg" alt="Giraffe">
             </div>
-        </div>
+        </section>
 
-        <!-- Certificate Section -->
-        <div class="certificate-section">
+        <section class="certificate-section">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="certificate-buttons">
-                <ul>
-                    <li><a href="#">ALL</a></li>
-                    <li><a href="#">CSE</a></li>
-                    <li><a href="#">WDD</a></li>
-                </ul>
+                <!-- Filter buttons -->
+               <button id="all-courses">All Courses</button>
+               <button id="cse-courses">CSE Courses</button>
+               <button id="wdd-courses">WDD Courses</button>
             </div>
 
-            <!-- Course List -->
             <div class="course-list">
                 <div class="completed">CSE 110</div>
                 <div class="completed">WDD 130</div>
@@ -279,21 +282,45 @@
                 <div class="not-completed">CSE 210</div>
                 <div class="not-completed">WDD 231</div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer>
         <div class="footer-content">
             <img src="flower.jpg" alt="Flower">
-            <span>&copy; Jimmy Opot Alando</span>
+            <span>&copy; <span id="currentyear"></span> Jimmy Opot Alando</span>
             <img src="kenya-flag.jpg" alt="Kenya Flag">
             <span>Kenya</span>
         </div>
         <div>
-            <span>Last updated: March 8, 2025, 10:30 AM</span>
+            <p id="lastModified"></p>
         </div>
     </footer>
+    <!-- JavaScript file inclusion -->
+    <script src="navigation.js" defer></script>
+    <script src="date.js" defer></script>
+    <script src="course.js" defer></script>
+     <!-- Hamburger Menu JavaScript (place it here before closing </body>) -->
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navLinks = document.querySelector('nav ul');
+
+            hamburgerMenu.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+    <script>
+        // JavaScript to dynamically update the current year and last modified date
+        document.getElementById('currentyear').textContent = new Date().getFullYear();
+        document.getElementById('lastModified').textContent = "Last updated: " + document.lastModified;
+    </script>
+    
+    
 
 </body>
 </html>
