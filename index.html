@@ -1,231 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Course Home Page for Jimmy Opot Alando">
     <meta name="author" content="Jimmy Opot Alando">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <!-- Reference JavaScript files in the head with defer -->
-     <script src="navigation.js" defer></script>
-     <script src="date.js" defer></script>
-     <script src="course.js" defer></script>
- </head>
     <title>Course Home Page</title>
 
-    <!-- Link to Normalize CSS -->
+    
     <link rel="stylesheet" href="normalize.css">
-    <!-- Link to Small Screen CSS -->
     <link rel="stylesheet" href="small.css">
-    <!-- Link to Larger Screen CSS with Media Queries -->
     <link rel="stylesheet" href="larger.css">
 
-    <!-- Link to Google Fonts -->
+    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
 
     
-
-    <style>
-        /* Basic Reset */
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Global styles */
-        header, section, footer {
-            width: 100%;
-            margin: 0;
-        }
-
-        /* Header section - Image and name */
-        header {
-            background-color: blue;
-            color: white;
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            align-items: center;
-        }
-
-        header img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        header .name {
-            font-size: 24px;
-        }
-
-        /* Navigation bar */
-        nav {
-            background-color: black;
-            color: white;
-            padding: 10px;
-        }
-
-        nav ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            font-size: 18px;
-        }
-
-        /* Main Content */
-        .main-content {
-            padding: 20px;
-            background-color: #f4f4f4;
-        }
-
-        /* Course Work section */
-        .course-work {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 40px;
-        }
-
-        .course-work .courses-list {
-            width: 70%;
-        }
-
-        .course-work .location {
-            width: 25%;
-            text-align: center;
-        }
-
-        .course-work img {
-            width: 100%;
-        }
-
-        /* Certificate section */
-        .certificate-section {
-            background-color: blue;
-            color: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .certificate-buttons {
-            background-color: black;
-            padding: 10px;
-        }
-
-        .certificate-buttons ul {
-            list-style-type: none;
-            display: flex;
-            justify-content: center;
-            padding: 0;
-        }
-
-        .certificate-buttons ul li {
-            margin: 0 10px;
-        }
-
-        .certificate-buttons ul li a {
-            color: white;
-            font-size: 18px;
-            text-decoration: none;
-        }
-
-        /* Course list */
-        .course-list {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-        }
-
-        .course-list div {
-            width: 20%;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .completed {
-            background-color: brown;
-            color: white;
-        }
-
-        .not-completed {
-            background-color: lightblue;
-            color: white;
-        }
-
-        /* Footer */
-        footer {
-            background-color: black;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        footer .footer-content {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-
-        footer .footer-content img {
-            width: 30px;
-            height: 30px;
-            margin: 0 5px;
-        }
-
-        footer .footer-content span {
-            margin: 0 10px;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .course-work {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .course-work .courses-list, .course-work .location {
-                width: 100%;
-            }
-
-            .certificate-buttons ul {
-                flex-direction: column;
-            }
-
-            .course-list {
-                flex-direction: column;
-            }
-
-            .footer-content {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <script src="navigation.js" defer></script>
+    <script src="date.js" defer></script>
+    <script src="course.js" defer></script>
 </head>
+
 <body>
 
-    <!-- Header -->
+    
     <header>
         <div>
             <img src="your-photo.jpg" alt="Jimmy Opot Alando">
@@ -233,20 +33,25 @@
         </div>
     </header>
 
-    <!-- Navigation Bar -->
+    
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="chamber.html">Chamber</a></li>
             <li><a href="https://github.com/jimmyopotalando" target="_blank">GitHub Profile</a></li>
-            <li><a href="https://linkedin.com/in/jimmyopotalando" target="_blank">LinkedIn</a></li>
+            <li><a href="https://linkedin.com/jimmyopotalando" target="_blank">LinkedIn</a></li>
         </ul>
+        <div class="hamburger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
 
-    <!-- Main Content -->
+    
     <main class="main-content">
         <h1>Home</h1>
-        
+
         <section class="course-work">
             <div class="courses-list">
                 <h2>Course Work</h2>
@@ -268,24 +73,21 @@
         <section class="certificate-section">
             <h2>Web and Computer Programming Certificate</h2>
             <div class="certificate-buttons">
-                <!-- Filter buttons -->
-               <button id="all-courses">All Courses</button>
-               <button id="cse-courses">CSE Courses</button>
-               <button id="wdd-courses">WDD Courses</button>
+                
+                <button id="all-courses">All Courses</button>
+                <button id="cse-courses">CSE Courses</button>
+                <button id="wdd-courses">WDD Courses</button>
             </div>
 
-            <div class="course-list">
-                <div class="completed">CSE 110</div>
-                <div class="completed">WDD 130</div>
-                <div class="completed">CSE 111</div>
-                <div class="completed">WDD 131</div>
-                <div class="not-completed">CSE 210</div>
-                <div class="not-completed">WDD 231</div>
+            <div id="course-list" class="course-list">
+                
             </div>
+
+            <p id="total-credits"></p>
         </section>
     </main>
 
-    <!-- Footer -->
+    
     <footer>
         <div class="footer-content">
             <img src="flower.jpg" alt="Flower">
@@ -297,30 +99,7 @@
             <p id="lastModified"></p>
         </div>
     </footer>
-    <!-- JavaScript file inclusion -->
-    <script src="navigation.js" defer></script>
-    <script src="date.js" defer></script>
-    <script src="course.js" defer></script>
-     <!-- Hamburger Menu JavaScript (place it here before closing </body>) -->
-     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const hamburgerMenu = document.querySelector('.hamburger-menu');
-            const navLinks = document.querySelector('nav ul');
-
-            hamburgerMenu.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        });
-    </script>
-</body>
-
-    <script>
-        // JavaScript to dynamically update the current year and last modified date
-        document.getElementById('currentyear').textContent = new Date().getFullYear();
-        document.getElementById('lastModified').textContent = "Last updated: " + document.lastModified;
-    </script>
-    
-    
 
 </body>
+
 </html>

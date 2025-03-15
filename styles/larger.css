@@ -5,13 +5,13 @@
         justify-content: space-between;
     }
 
-    #course-work {
+    .course-work {
         display: flex;
         justify-content: space-between;
         margin: 20px;
     }
 
-    #certificate-buttons {
+    .certificate-buttons {
         display: flex;
         justify-content: center;
     }
@@ -19,5 +19,16 @@
     footer {
         display: flex;
         justify-content: space-around;
+    }
+
+    .course-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .course-list div {
+        width: 45%;
+        margin: 10px 0;
     }
 }

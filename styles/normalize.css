@@ -4,3 +4,78 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+header {
+    background-color: #1f3a68;  
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+}
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    background-color: black;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #81b3d3; /* Light blue */
+    border-radius: 5px;
+}
+
+
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-menu div {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+        border-top: 1px solid #ccc;
+    }
+}
