@@ -1,0 +1,65 @@
+[
+    {
+        "name": "Company One",
+        "address": "123 Main St, Timbuktu",
+        "phone": "(555) 123-4567",
+        "website": "https://www.companyone.com",
+        "image": "images/company1.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "Local business since 1990"
+    },
+    {
+        "name": "Company Two",
+        "address": "456 Elm St, Timbuktu",
+        "phone": "(555) 234-5678",
+        "website": "https://www.companytwo.com",
+        "image": "images/company2.jpg",
+        "membershipLevel": 2,
+        "otherInfo": "Award-winning restaurant"
+    },
+    {
+        "name": "Company Three",
+        "address": "789 Oak St, Timbuktu",
+        "phone": "(555) 345-6789",
+        "website": "https://www.companythree.com",
+        "image": "images/company1.jpg",
+        "membershipLevel": 3,
+        "otherInfo": "Top-tier digital agency"
+    },
+    {
+        "name": "Company Four",
+        "address": "321 Pine St, Timbuktu",
+        "phone": "(555) 456-7890",
+        "website": "https://www.companyfour.com",
+        "image": "images/company2.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "Trusted construction company"
+    },
+    {
+        "name": "Company Five",
+        "address": "654 Maple St, Timbuktu",
+        "phone": "(555) 567-8901",
+        "website": "https://www.companyfive.com",
+        "image": "images/company1.jpg",
+        "membershipLevel": 2,
+        "otherInfo": "Popular local gym"
+    },
+    {
+        "name": "Company Six",
+        "address": "987 Cedar St, Timbuktu",
+        "phone": "(555) 678-9012",
+        "website": "https://www.companysix.com",
+        "image": "images/company2.jpg",
+        "membershipLevel": 3,
+        "otherInfo": "Eco-friendly products"
+    },
+    {
+        "name": "Company Seven",
+        "address": "135 Birch St, Timbuktu",
+        "phone": "(555) 789-0123",
+        "website": "https://www.companyseven.com",
+        "image": "images/company1.jpg",
+        "membershipLevel": 1,
+        "otherInfo": "Local bookstore and cafe"
+    }
+]
