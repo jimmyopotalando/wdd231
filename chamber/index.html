@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Timbuktu Chamber of Commerce">
+    <meta name="author" content="Your Name">
+    <title>Timbuktu Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- External Stylesheets -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Timbuktu Chamber of Commerce</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero-image.jpg" alt="Timbuktu City" class="hero-image">
+            <h2>Welcome to the Timbuktu Chamber of Commerce</h2>
+            <p>Your hub for local business growth, networking, and resources.</p>
+            <a href="join.html" class="cta-button">Join Us Today</a>
+        </section>
+
+        <!-- Current Events Section -->
+        <section class="events">
+            <h2>Upcoming Events</h2>
+            <div id="events-list">
+                <!-- JavaScript will dynamically load events here -->
+            </div>
+        </section>
+
+        <!-- Weather Section -->
+        <section class="weather">
+            <h2>Current Weather in Timbuktu</h2>
+            <div id="weather-info">
+                <!-- JavaScript will load weather data here -->
+            </div>
+        </section>
+
+        <!-- Member Spotlights Section -->
+        <section class="spotlights">
+            <h2>Member Spotlights</h2>
+            <div id="spotlights">
+                <!-- JavaScript will load spotlight members here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Contact us at info@chamber.com</p>
+        <p>Last modified: <span id="last-modified"></span></p>
+        <p>Developed by: Jimmy Opot Alando, WDD 231</p>
+        <p>&copy; <span id="copyright-year"></span></p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/members.js"></script>
+    <script src="js/weather.js"></script>
+    <script>
+        // Set last modified date
+        document.getElementById("last-modified").textContent = document.lastModified;
+
+        // Set copyright year
+        const currentYear = new Date().getFullYear();
+        document.getElementById("copyright-year").textContent = currentYear;
+    </script>
+
+</body>
+</html>

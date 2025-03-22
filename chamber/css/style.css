@@ -106,3 +106,71 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+
+
+
+
+/* Main styling for the hero section */
+.hero {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Events Section */
+.events {
+    background-color: #ffffff;
+    padding: 30px 20px;
+}
+
+/* Weather Section */
+.weather {
+    background-color: #e9ecef;
+    padding: 30px 20px;
+}
+
+/* Spotlights Section */
+.spotlights {
+    background-color: #ffffff;
+    padding: 30px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.spotlight-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.spotlight-card img {
+    width: 100%;
+    height: auto;
+    max-width: 100px;
+}
