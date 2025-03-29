@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You for Your Submission</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your chamber's common styles -->
+    <style>
+        /* Styling for the thank you page */
+        .thank-you-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .thank-you-container h1 {
+            color: #2a4530;
+            font-size: 2rem;
+        }
+
+        .thank-you-container p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .form-info {
+            text-align: left;
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 8px;
+            background-color: #f1f1f1;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-info h3 {
+            color: #333;
+        }
+
+        .form-info p {
+            margin: 10px 0;
+        }
+
+        .form-info .label {
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-info .value {
+            color: #333;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        .back-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Chamber of Commerce</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Thank You Page Content -->
+    <main>
+        <div class="thank-you-container">
+            <h1>Thank You for Your Submission!</h1>
+            <p>We have successfully received your application. We are excited to review your information and will get back to you shortly.</p>
+
+            <div class="form-info">
+                <h3>Your Submitted Information:</h3>
+                <!-- Displaying User Information -->
+                <p><span class="label">First Name:</span> <span class="value" id="first_name_display"></span></p>
+                <p><span class="label">Last Name:</span> <span class="value" id="last_name_display"></span></p>
+                <p><span class="label">Email Address:</span> <span class="value" id="email_display"></span></p>
+                <p><span class="label">Mobile Phone Number:</span> <span class="value" id="phone_display"></span></p>
+                <p><span class="label">Business/Organization Name:</span> <span class="value" id="business_name_display"></span></p>
+                <p><span class="label">Submission Date:</span> <span class="value" id="timestamp_display"></span></p>
+            </div>
+
+            <a href="join.html" class="back-button">Back to Join Page</a>
+        </div>
+    </main>
+
+    <script>
+        // JavaScript to populate the form data from URL query parameters
+        document.addEventListener("DOMContentLoaded", function() {
+            // Getting the query parameters from the URL
+            const urlParams = new URLSearchParams(window.location.search);
+
+            // Extracting form values from the query parameters
+            const firstName = urlParams.get('first_name');
+            const lastName = urlParams.get('last_name');
+            const email = urlParams.get('email');
+            const phone = urlParams.get('phone');
+            const businessName = urlParams.get('business_name');
+            const timestamp = urlParams.get('timestamp');
+
+            // Setting the values to the page elements
+            document.getElementById('first_name_display').textContent = firstName;
+            document.getElementById('last_name_display').textContent = lastName;
+            document.getElementById('email_display').textContent = email;
+            document.getElementById('phone_display').textContent = phone;
+            document.getElementById('business_name_display').textContent = businessName;
+            document.getElementById('timestamp_display').textContent = timestamp;
+        });
+    </script>
+</body>
+</html>
