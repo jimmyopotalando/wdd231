@@ -1,0 +1,51 @@
+[
+    {
+      "name": "Item 1 Name",
+      "address": "123 Main St, City, State",
+      "description": "Description of Item 1.",
+      "image": "images/item1.webp"
+    },
+    {
+      "name": "Item 2 Name",
+      "address": "456 Elm St, City, State",
+      "description": "Description of Item 2.",
+      "image": "images/item2.webp"
+    },
+    {
+      "name": "Item 3 Name",
+      "address": "789 Oak St, City, State",
+      "description": "Description of Item 3.",
+      "image": "images/item3.webp"
+    },
+    {
+      "name": "Item 4 Name",
+      "address": "101 Pine St, City, State",
+      "description": "Description of Item 4.",
+      "image": "images/item4.webp"
+    },
+    {
+      "name": "Item 5 Name",
+      "address": "202 Maple St, City, State",
+      "description": "Description of Item 5.",
+      "image": "images/item5.webp"
+    },
+    {
+      "name": "Item 6 Name",
+      "address": "303 Birch St, City, State",
+      "description": "Description of Item 6.",
+      "image": "images/item6.webp"
+    },
+    {
+      "name": "Item 7 Name",
+      "address": "404 Cedar St, City, State",
+      "description": "Description of Item 7.",
+      "image": "images/item7.webp"
+    },
+    {
+      "name": "Item 8 Name",
+      "address": "505 Ash St, City, State",
+      "description": "Description of Item 8.",
+      "image": "images/item8.webp"
+    }
+  ]
+  
