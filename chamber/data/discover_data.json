@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Lake Victoria",
+        "address": "Kisumu, Kenya",
+        "description": "Africa's largest freshwater lake, offering stunning views, fishing, and boat tours. Explore its islands and vibrant lakeside communities.",
+        "image": "lake_victoria.webp"
+    },
+    {
+        "name": "Kisumu Impala Sanctuary",
+        "address": "Off Kisumu-Nairobi Road, Kisumu",
+        "description": "A small but significant wildlife sanctuary home to impalas, zebras, cheetahs, and various bird species. A perfect spot for a quick wildlife encounter.",
+        "image": "impala_sanctuary.webp"
+    },
+    {
+        "name": "Dunga Beach",
+        "address": "Dunga, Kisumu",
+        "description": "A popular lakeside spot known for its traditional fishing activities, local restaurants serving fresh fish, and beautiful sunsets over the water.",
+        "image": "dunga_beach.webp"
+    },
+    {
+        "name": "Kisumu Museum",
+        "address": "Milimani Area, Kisumu",
+        "description": "Showcases the cultural and natural history of Western Kenya, including ethnographic exhibits, traditional artifacts, and a snake park.",
+        "image": "kisumu_museum.webp"
+    },
+    {
+        "name": "Hippo Point",
+        "address": " недалеко от Kisumu (near Kisumu)",
+        "description": "Despite its name, Hippo Point is primarily a scenic viewing area on Lake Victoria, offering fantastic panoramic views, especially at sunset. Hippos can sometimes be spotted in the distance.",
+        "image": "hippo_point.webp"
+    },
+    {
+        "name": "Maseno University",
+        "address": "Maseno, Kisumu County",
+        "description": "One of Kenya's leading universities, known for its beautiful campuses and academic excellence. The surrounding area offers a vibrant student life.",
+        "image": "maseno_university.webp"
+    },
+    {
+        "name": "Kakamega Forest National Reserve",
+        "address": "Kakamega, near Kisumu",
+        "description": "A remnant of the ancient Guineo-Congolian rainforest, rich in biodiversity with unique flora and fauna, including numerous bird species and primates. Ideal for nature walks and birdwatching.",
+        "image": "kakamega_forest.webp"
+    },
+    {
+        "name": "Luanda Magere Shrine",
+        "address": " недалеко от Kisumu (near Kisumu)",
+        "description": "A historical and cultural site commemorating the legendary Luo warrior, Luanda Magere. Learn about his heroic deeds and the local traditions associated with him.",
+        "image": "luanda_magere.webp"
+    }
+]
