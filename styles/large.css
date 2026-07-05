@@ -1,0 +1,105 @@
+/* large.css - Desktop Styles (≥600px) */
+
+@media (min-width: 600px) {
+
+    /* Header */
+    header {
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    #menuButton {
+        display: none;
+        /* hide hamburger on large screens */
+    }
+
+    /* Navigation */
+    nav {
+        display: flex !important;
+        background-color: transparent;
+        margin-left: auto;
+    }
+
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav li {
+        border: none;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+        color: #fff;
+        background-color: #222;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    nav a:hover,
+    nav a:focus {
+        background-color: #555;
+    }
+
+    nav a.current {
+        background-color: #444;
+        font-weight: bold;
+    }
+
+    /* Main Layout */
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    section {
+        margin: 0;
+    }
+
+    /* Courses Section spans full width */
+    section:nth-of-type(3) {
+        grid-column: 1 / -1;
+    }
+
+    .filters {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .courses {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+
+    .course {
+        margin: 0;
+    }
+
+    /* Footer */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 2rem;
+        text-align: left;
+    }
+
+    footer .social {
+        display: flex;
+        gap: 1rem;
+    }
+
+    footer p {
+        margin: 0;
+    }
+}

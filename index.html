@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Course Home Page for WDD231 showcasing student profile and certificate courses.">
+    <meta name="author" content="Jimmy Opot Alando">
+    <title>WDD231 Course Home Page</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <img src="images/logo.jpg" alt="Site Logo" class="logo">
+        <span class="site-name">Jimmy Opot Alando</span>
+        <button id="menuButton" aria-label="Menu">&#9776;</button>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="primaryNav">
+        <ul>
+            <li><a href="index.html" class="current">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Final</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <h1>Home</h1>
+
+        <!-- About Me Section -->
+        <section>
+            <h2>About Me</h2>
+            <p>Hello! My name is Jimmy Opot Alando. I am a BYU‑Pathway mentor and aspiring full‑stack web developer. I
+                enjoy community leadership, livestock technology, and building digital solutions.</p>
+        </section>
+
+        <!-- Student Photo Section -->
+        <section>
+            <h2>Student Photo</h2>
+            <img src="images/student-photo.jpg" alt="Portrait of Jimmy Opot Alando">
+        </section>
+
+        <!-- Courses Section -->
+        <section>
+            <h2>Web Certificate Courses</h2>
+            <div class="filters">
+                <button id="allBtn">All Courses</button>
+                <button id="wddBtn">WDD Courses</button>
+                <button id="cseBtn">CSE Courses</button>
+            </div>
+            <div id="courseContainer" class="courses">
+                <!-- Dynamic course cards will be injected here by course.js -->
+            </div>
+            <p>Total Credits: <span id="totalCredits"></span></p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social">
+            <a href="https://github.com/jimmyopotalando" target="_blank">
+                <img src="images/social-icons/github.svg" alt="GitHub">
+            </a>
+            <a href="https://www.linkedin.com/in/jimmy-alando-864434236" target="_blank">
+                <img src="images/social-icons/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/opot_jimmy" target="_blank">
+                <img src="images/social-icons/twitter.svg" alt="Twitter">
+            </a>
+        </div>
+
+        <p>
+            &copy; <span id="currentyear"></span> | Jimmy Opot Alando | Kenya
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
