@@ -1,97 +1,268 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Course Home Page for WDD231 showcasing student profile and certificate courses.">
+
+    <meta name="description"
+        content="WDD231 Course Home Page showcasing Jimmy Opot Alando's profile, web development courses, and certificate progress.">
+
     <meta name="author" content="Jimmy Opot Alando">
-    <title>WDD231 Course Home Page</title>
+
+    <title>WDD231 Course Home Page | Jimmy Opot Alando</title>
+
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- CSS Files -->
     <link rel="stylesheet" href="styles/normalize.css">
+
     <link rel="stylesheet" href="styles/small.css">
+
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- JavaScript -->
+
+    <!-- JavaScript Files -->
     <script src="scripts/navigation.js" defer></script>
+
     <script src="scripts/date.js" defer></script>
+
     <script src="scripts/course.js" defer></script>
+
 </head>
 
+
 <body>
+
+
     <!-- Header -->
     <header>
-        <img src="images/logo.jpg" alt="Site Logo" class="logo">
-        <span class="site-name">Jimmy Opot Alando</span>
-        <button id="menuButton" aria-label="Menu">&#9776;</button>
+
+        <img src="images/logo.jpg" alt="Jimmy Opot Alando personal logo" class="logo">
+
+
+        <span class="site-name">
+            Jimmy Opot Alando
+        </span>
+
+
+        <button id="menuButton" aria-label="Open navigation menu">
+            ☰
+        </button>
+
     </header>
+
+
 
     <!-- Navigation -->
     <nav id="primaryNav">
+
         <ul>
-            <li><a href="index.html" class="current">Home</a></li>
-            <li><a href="#">Chamber</a></li>
-            <li><a href="#">Final</a></li>
+
+            <li>
+                <a href="index.html" class="current">
+                    Home
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#">
+                    Chamber
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#">
+                    Final Project
+                </a>
+            </li>
+
+
+            <li>
+                <a href="#">
+                    GitHub
+                </a>
+            </li>
+
+
         </ul>
+
     </nav>
+
+
+
 
     <!-- Main Content -->
     <main>
-        <h1>Home</h1>
 
-        <!-- About Me Section -->
-        <section>
-            <h2>About Me</h2>
-            <p>Hello! My name is Jimmy Opot Alando. I am a BYU‑Pathway mentor and aspiring full‑stack web developer. I
-                enjoy community leadership, livestock technology, and building digital solutions.</p>
+
+        <h1>
+            Home
+        </h1>
+
+
+
+        <!-- About Me -->
+        <section class="about">
+
+            <h2>
+                About Me
+            </h2>
+
+
+            <p>
+                Hello! My name is Jimmy Opot Alando. I am a software development
+                student passionate about web technologies, full-stack development,
+                and creating digital solutions that solve real-world problems.
+            </p>
+
+
+            <p>
+                I currently serve as a BYU-Pathway mentor and enjoy supporting
+                students while continuing to grow my skills in HTML, CSS,
+                JavaScript, databases, and modern web development frameworks.
+            </p>
+
         </section>
 
-        <!-- Student Photo Section -->
-        <section>
-            <h2>Student Photo</h2>
-            <img src="images/student-photo.jpg" alt="Portrait of Jimmy Opot Alando">
+
+
+
+        <!-- Student Photo -->
+        <section class="student-photo">
+
+            <h2>
+                Student Photo
+            </h2>
+
+
+            <img src="images/student-photo.jpg" alt="Portrait of Jimmy Opot Alando" loading="lazy">
+
         </section>
 
-        <!-- Courses Section -->
-        <section>
-            <h2>Web Certificate Courses</h2>
+
+
+
+
+        <!-- Courses -->
+        <section class="courses-section">
+
+            <h2>
+                Web Certificate Courses
+            </h2>
+
+
+
             <div class="filters">
-                <button id="allBtn">All Courses</button>
-                <button id="wddBtn">WDD Courses</button>
-                <button id="cseBtn">CSE Courses</button>
+
+                <button id="allBtn">
+                    All Courses
+                </button>
+
+
+                <button id="wddBtn">
+                    WDD Courses
+                </button>
+
+
+                <button id="cseBtn">
+                    CSE Courses
+                </button>
+
             </div>
+
+
+
             <div id="courseContainer" class="courses">
-                <!-- Dynamic course cards will be injected here by course.js -->
+
+                <!-- Courses will be generated dynamically by course.js -->
+
             </div>
-            <p>Total Credits: <span id="totalCredits"></span></p>
+
+
+
+            <p>
+                Total Credits:
+                <span id="totalCredits">
+                </span>
+            </p>
+
+
         </section>
+
+
+
     </main>
+
+
+
+
 
     <!-- Footer -->
     <footer>
+
+
         <div class="social">
+
+
             <a href="https://github.com/jimmyopotalando" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-icons/github.svg" alt="GitHub">
+
+                <img src="images/social-icons/github.svg" alt="GitHub profile">
+
             </a>
+
+
+
+
             <a href="https://www.linkedin.com/in/jimmy-alando-864434236" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-icons/linkedin.svg" alt="LinkedIn">
+
+                <img src="images/social-icons/linkedin.svg" alt="LinkedIn profile">
+
             </a>
+
+
+
+
             <a href="https://x.com/opot_jimmy" target="_blank" rel="noopener noreferrer">
-                <img src="images/social-icons/twitter.svg" alt="Twitter">
+
+                <img src="images/social-icons/twitter.svg" alt="Twitter profile">
+
             </a>
+
 
         </div>
 
+
+
+
+
         <p>
-            &copy; <span id="currentyear"></span> | Jimmy Opot Alando | Kenya
+            © <span id="currentyear"></span>
+            | Jimmy Opot Alando
+            | Kenya
         </p>
+
+
+
         <p id="lastModified"></p>
+
+
     </footer>
+
+
+
 </body>
 
 </html>
-<!-- test -->
+```
