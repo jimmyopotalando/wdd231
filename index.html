@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Jimmy Opot Alando - WDD231 Course Home Page showcasing web development projects and certificate courses.">
+        content="Jimmy Opot Alando's WDD231 Course Home Page featuring responsive design, web projects, and certificate courses.">
     <meta name="author" content="Jimmy Opot Alando">
     <title>WDD231 | Course Home Page</title>
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- CSS Files -->
@@ -26,7 +28,7 @@
 <body>
     <header>
         <div class="header-container">
-            <img src="images/logo.jpg" alt="Site Logo" class="logo">
+            <img src="images/logo.svg" alt="Site Logo" class="logo">
             <span class="site-name">Jimmy Opot Alando</span>
             <nav id="nav-menu">
                 <a href="index.html" class="active">Home</a>
@@ -36,38 +38,30 @@
             <button id="menu-button" aria-label="Toggle Menu">☰</button>
         </div>
     </header>
-    
+
     <main>
         <h1>Home</h1>
-    
+
         <section id="about">
             <h2>About Me</h2>
-            <p>
-                My name is Jimmy Opot Alando, and I live in Kenya. I serve as a BYU‑Pathway mentor, guiding students through
-                their academic journeys while encouraging them to discover their potential.
-            </p>
-            <p>
-                I am passionate about full‑stack web development, currently practicing through projects and internships that
-                focus on the MERN stack. I enjoy building responsive, accessible applications — from course home pages to
-                community‑focused tools like livestock registration and verification systems.
-            </p>
-            <p>
-                Beyond technology, I am deeply committed to community leadership and development initiatives. My goal is to
-                combine technical skills with social impact, creating solutions that empower individuals and strengthen
-                communities.
-            </p>
-            <p>
-                When I’m not coding or mentoring, I enjoy exploring biblical and historical studies, engaging in discussions on
-                global power dynamics, and connecting with like‑minded people who share a vision for positive change.
-            </p>
+            <p>My name is Jimmy Opot Alando, and I live in Kenya. I serve as a BYU‑Pathway mentor, guiding students
+                through their academic journeys while encouraging them to discover their potential.</p>
+            <p>I am passionate about full‑stack web development, currently practicing through projects and internships
+                that focus on the MERN stack. I enjoy building responsive, accessible applications — from course home
+                pages to community‑focused tools like livestock registration and verification systems.</p>
+            <p>Beyond technology, I am deeply committed to community leadership and development initiatives. My goal is
+                to combine technical skills with social impact, creating solutions that empower individuals and
+                strengthen communities.</p>
+            <p>When I’m not coding or mentoring, I enjoy exploring biblical and historical studies, engaging in
+                discussions on global power dynamics, and connecting with like‑minded people who share a vision for
+                positive change.</p>
         </section>
 
-    
         <section id="photo">
             <h2>Student Photo</h2>
             <img src="images/student-photo.jpg" alt="Photo of Jimmy Opot Alando" class="student-photo">
         </section>
-    
+
         <section id="courses">
             <h2>Web Certificate Courses</h2>
             <div class="filter-buttons">
@@ -79,20 +73,23 @@
             <p id="total-credits">Total credits: <span id="credits-value">0</span></p>
         </section>
     </main>
-    
+
     <footer>
         <div class="social-links">
             <a href="https://linkedin.com/in/jimmyopotalando" target="_blank">
-                <img src="images/linkedin.svg" alt="LinkedIn Icon">
+                <img src="images/linkedin.svg" alt="LinkedIn">
             </a>
             <a href="https://github.com/jimmyopotalando" target="_blank">
-                <img src="images/github.svg" alt="GitHub Icon">
+                <img src="images/github.svg" alt="GitHub">
             </a>
             <a href="#">
-                <img src="images/x.svg" alt="X Icon">
+                <img src="images/twitter-x.svg" alt="X (Twitter)">
             </a>
         </div>
 
         <p>&copy; <span id="currentyear"></span> Jimmy Opot Alando • Kenya</p>
         <p id="lastModified"></p>
     </footer>
+</body>
+
+</html>
