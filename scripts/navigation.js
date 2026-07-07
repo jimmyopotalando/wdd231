@@ -1,27 +1,37 @@
 // navigation.js
 
-// Select elements
-const menuButton = document.getElementById('menuButton');
-const primaryNav = document.getElementById('primaryNav');
+// Grab elements
+const menuButton = document.getElementById('menu-button');
+const navMenu = document.getElementById('nav-menu');
 
-// Toggle navigation open/close
+// Toggle menu on click
 menuButton.addEventListener('click', () => {
-  const isOpen = primaryNav.classList.toggle('open');
+  const isOpen = navMenu.classList.toggle('open');
   menuButton.setAttribute('aria-expanded', isOpen);
 });
 
-// Keyboard accessibility for menu button
+// Keyboard accessibility for hamburger
 menuButton.addEventListener('keyup', (e) => {
   if (e.key === 'Enter' || e.key === ' ') {
-    const isOpen = primaryNav.classList.toggle('open');
+    const isOpen = navMenu.classList.toggle('open');
     menuButton.setAttribute('aria-expanded', isOpen);
   }
 });
 
 // Wayfinding: highlight current page link
-const navLinks = primaryNav.querySelectorAll('a');
-navLinks.forEach(link => {
+const links = navMenu.querySelectorAll('a');
+links.forEach(link => {
   if (link.href === window.location.href) {
-    link.classList.add('current');
+    link.classList.add('active');
   }
+});
+
+// Optional: close menu when a link is clicked (mobile UX improvement)
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    if (navMenu.classList.contains('open')) {
+      navMenu.classList.remove('open');
+      menuButton.setAttribute('aria-expanded', false);
+    }
+  });
 });

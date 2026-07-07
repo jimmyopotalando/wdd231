@@ -1,105 +1,115 @@
-/* large.css - Desktop Styles (≥600px) */
+/* =========================
+   large.css — Desktop Layout
+   ========================= */
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
 
     /* Header */
-    header {
+    .header-container {
+        display: flex;
+        align-items: center;
         justify-content: flex-start;
         gap: 1rem;
     }
 
-    #menuButton {
-        display: none;
-        /* hide hamburger on large screens */
+    .logo {
+        width: 50px;
+        height: 50px;
     }
 
-    /* Navigation */
-    nav {
+    .site-name {
+        font-size: 1.25rem;
+        font-weight: 600;
+    }
+
+    /* Navigation: horizontal beside logo + name */
+    #nav-menu {
         display: flex !important;
-        background-color: transparent;
-        margin-left: auto;
+        flex-direction: row;
+        gap: 1.5rem;
+        margin-left: 2rem;
+        background: none;
     }
 
-    nav ul {
-        display: flex;
-        gap: 1rem;
-    }
-
-    nav li {
+    #nav-menu a {
+        color: #fff;
+        padding: 0.5rem 0;
         border: none;
     }
 
-    nav a {
-        padding: 0.5rem 1rem;
-        color: #fff;
-        background-color: #222;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
+    #menu-button {
+        display: none;
+        /* hide hamburger on desktop */
     }
 
-    nav a:hover,
-    nav a:focus {
-        background-color: #555;
-    }
-
-    nav a.current {
-        background-color: #444;
-        font-weight: bold;
-    }
-
-    /* Main Layout */
+    /* Main layout */
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
         padding: 2rem;
     }
 
-    main h1 {
-        grid-column: 1 / -1;
-        text-align: center;
+    h1 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    /* About + Photo side by side */
+    #about,
+    #photo {
+        display: inline-block;
+        vertical-align: top;
+        width: 48%;
+    }
+
+    #about {
+        margin-right: 2%;
+    }
+
+    #photo img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Courses section */
+    #courses {
+        margin-top: 2rem;
+    }
+
+    .filter-buttons {
+        display: flex;
+        width: 100%;
         margin-bottom: 1rem;
     }
 
-    section {
-        margin: 0;
+    .filter-buttons button {
+        flex: 1;
+        padding: 1rem;
+        font-size: 1rem;
     }
 
-    /* Courses Section spans full width */
-    section:nth-of-type(3) {
-        grid-column: 1 / -1;
-    }
-
-    .filters {
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    .courses {
+    /* Course cards in grid */
+    .course-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         gap: 1rem;
     }
 
-    .course {
-        margin: 0;
+    .course-container .course {
+        text-align: left;
     }
 
     /* Footer */
     footer {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 2rem;
-        text-align: left;
+        padding: 2rem 0;
     }
 
-    footer .social {
-        display: flex;
-        gap: 1rem;
+    .social-links {
+        margin-bottom: 1rem;
     }
 
     footer p {
-        margin: 0;
+        font-size: 1rem;
     }
 }

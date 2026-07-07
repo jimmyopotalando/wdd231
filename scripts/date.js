@@ -1,13 +1,10 @@
 // date.js
 
-// Dynamically set the current year
-const currentYearElement = document.getElementById('currentyear');
-if (currentYearElement) {
-  currentYearElement.textContent = new Date().getFullYear();
-}
+// Dynamically set current year
+const yearSpan = document.getElementById('currentyear');
+const currentYear = new Date().getFullYear();
+yearSpan.textContent = currentYear;
 
-// Dynamically set the last modified date
-const lastModifiedElement = document.getElementById('lastModified');
-if (lastModifiedElement) {
-  lastModifiedElement.textContent = "Last Modified: " + document.lastModified;
-}
+// Dynamically set last modified date
+const lastModifiedPara = document.getElementById('lastModified');
+lastModifiedPara.textContent = `Last Modified: ${document.lastModified}`;

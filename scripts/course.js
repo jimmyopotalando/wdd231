@@ -1,49 +1,66 @@
 // course.js
 
-// Course List Array (Web and Computer Programming Certificate)
+// Course List Array
 const courses = [
-  { code: 'WDD130', name: 'Web Fundamentals', credits: 3, completed: true, category: 'WDD' },
-  { code: 'WDD131', name: 'Dynamic Web Fundamentals', credits: 3, completed: false, category: 'WDD' },
-  { code: 'WDD231', name: 'Frontend Development', credits: 3, completed: false, category: 'WDD' },
-  { code: 'WDD330', name: 'Web Backend Development', credits: 3, completed: false, category: 'WDD' },
-  { code: 'CSE110', name: 'Programming Basics', credits: 3, completed: true, category: 'CSE' },
-  { code: 'CSE111', name: 'Programming with Functions', credits: 3, completed: false, category: 'CSE' },
-  { code: 'CSE210', name: 'Programming with Classes', credits: 3, completed: false, category: 'CSE' },
-  { code: 'CSE310', name: 'Data Structures', credits: 3, completed: false, category: 'CSE' }
+  { code: "WDD130", name: "Web Fundamentals", credits: 3, completed: true },
+  { code: "WDD131", name: "Dynamic Web Fundamentals", credits: 3, completed: true },
+  { code: "WDD231", name: "Frontend Development I", credits: 3, completed: false },
+  { code: "CSE110", name: "Introduction to Programming", credits: 2, completed: true },
+  { code: "CSE111", name: "Programming with Functions", credits: 2, completed: false },
+  { code: "CSE210", name: "Programming with Classes", credits: 2, completed: false },
+  { code: "CSE230", name: "Discrete Structures", credits: 2, completed: false },
+  { code: "CSE250", name: "Data Structures", credits: 2, completed: false }
 ];
 
-// DOM elements
-const courseContainer = document.getElementById('courseContainer');
-const totalCreditsElement = document.getElementById('totalCredits');
+// DOM references
+const courseContainer = document.getElementById("course-cards");
+const creditsValue = document.getElementById("credits-value");
 
-// Function to display courses
-function displayCourses(filter) {
-  courseContainer.innerHTML = '';
+// Render courses
+function renderCourses(courseList) {
+  courseContainer.innerHTML = ""; // clear previous
+  let totalCredits = 0;
 
-  const filteredCourses = filter === 'All'
-    ? courses
-    : courses.filter(course => course.category === filter);
+  courseList.forEach(course => {
+    const card = document.createElement("div");
+    card.classList.add("course");
+    if (course.completed) {
+      card.classList.add("completed");
+    }
 
-  filteredCourses.forEach(course => {
-    const card = document.createElement('div');
-    card.className = course.completed ? 'course completed' : 'course';
     card.innerHTML = `
       <h3>${course.code}</h3>
       <p>${course.name}</p>
       <p>Credits: ${course.credits}</p>
+      <p>Status: ${course.completed ? "Completed ✅" : "In Progress ⏳"}</p>
     `;
+
     courseContainer.appendChild(card);
+    totalCredits += course.credits;
   });
 
-  // Calculate total credits dynamically
-  const totalCredits = filteredCourses.reduce((sum, course) => sum + course.credits, 0);
-  totalCreditsElement.textContent = totalCredits;
+  creditsValue.textContent = totalCredits;
 }
 
-// Event listeners for filter buttons
-document.getElementById('allBtn').addEventListener('click', () => displayCourses('All'));
-document.getElementById('wddBtn').addEventListener('click', () => displayCourses('WDD'));
-document.getElementById('cseBtn').addEventListener('click', () => displayCourses('CSE'));
+// Filter functions
+function showAll() {
+  renderCourses(courses);
+}
 
-// Initial display
-displayCourses('All');
+function showCSE() {
+  const cseCourses = courses.filter(c => c.code.startsWith("CSE"));
+  renderCourses(cseCourses);
+}
+
+function showWDD() {
+  const wddCourses = courses.filter(c => c.code.startsWith("WDD"));
+  renderCourses(wddCourses);
+}
+
+// Event listeners for buttons
+document.getElementById("all").addEventListener("click", showAll);
+document.getElementById("cse").addEventListener("click", showCSE);
+document.getElementById("wdd").addEventListener("click", showWDD);
+
+// Initial render
+showAll();
