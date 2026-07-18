@@ -4,7 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiungani Chamber of Commerce Directory</title>
+    <title>Timbuktu Chamber of Commerce Directory</title>
+
+    <!-- SEO Meta -->
+    <meta name="description"
+        content="Timbuktu Chamber of Commerce Directory showcasing local businesses, contact details, and community opportunities.">
+    <meta name="author" content="Jimmy Opot Alando">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Open Graph (Social Sharing) -->
+    <meta property="og:title" content="Timbuktu Chamber of Commerce Directory">
+    <meta property="og:description"
+        content="Explore the Timbuktu Chamber of Commerce Directory — connect with businesses, discover services, and grow your community.">
+    <meta property="og:image" content="https://jimmyopotalando.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://jimmyopotalando.github.io/wdd231/chamber/directory.html">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
@@ -15,7 +37,7 @@
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="Chamber Logo">
-            <h1>Kiungani Chamber of Commerce</h1>
+            <h1>Timbuktu Chamber of Commerce</h1>
         </div>
         <nav>
             <button id="menu-toggle">☰</button>
@@ -30,6 +52,7 @@
 
     <!-- Main -->
     <main>
+        <h1>Timbuktu Chamber of Commerce Directory</h1>
         <h2>Business Directory</h2>
 
         <!-- View toggle buttons -->
@@ -66,33 +89,29 @@
     <!-- Footer -->
     <footer>
         <div class="footer-left">
-            <p>Kiungani Chamber of Commerce</p>
-            <p>Email: info@kiunganichamber.org</p>
+            <p>Timbuktu Chamber of Commerce</p>
+            <p>Email: info@timbuktuchamber.org</p>
             <p>Phone: +254 712 345678</p>
         </div>
 
         <div class="footer-center">
             <div class="social-icons">
-                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
-                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+                <a href="#"><img src="images/youtube.png" alt="YouTube Icon"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter Icon"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn Icon"></a>
             </div>
         </div>
 
         <div class="footer-right">
             <p>WDD 231 Class Project</p>
             <p>Student: Jimmy Opot Alando</p>
-            <p>&copy; <span id="year"></span> Kiungani Chamber of Commerce</p>
+            <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
             <p>Last Modified: <span id="last-modified"></span></p>
         </div>
     </footer>
 
-    <script>
-        // Auto-update year and last modified
-        document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("last-modified").textContent = document.lastModified;
-    </script>
-
+    <!-- External JavaScript -->
+    <script src="scripts/footer.js" defer></script>
 </body>
 
 </html>

@@ -11,7 +11,6 @@
         justify-content: space-between;
         padding: 1rem 2rem;
         background-color: #111;
-        /* dark background */
         color: #fff;
     }
 
@@ -29,28 +28,37 @@
     header h1 {
         font-size: 1.5rem;
         font-weight: 600;
+        font-family: 'Poppins', sans-serif;
     }
 
-    /* Navigation: horizontal beside logo + name */
+    /* Navigation */
     #nav-links {
-        display: flex !important;
+        display: flex;
         flex-direction: row;
         gap: 1.5rem;
         background: none;
+        list-style: none;
+        /* remove dots */
+        margin: 0;
+        padding: 0;
+    }
+
+    #nav-links li {
+        list-style: none;
     }
 
     #nav-links a {
         color: #fff;
-        /* visible on dark header */
         text-decoration: none;
         font-weight: 500;
+        font-family: 'Poppins', sans-serif;
         transition: color 0.3s ease;
     }
 
     #nav-links a:hover,
     #nav-links a.active {
         color: #f39c12;
-        /* accent color on hover/active */
+        /* accent color */
     }
 
     #menu-toggle {
@@ -63,24 +71,42 @@
         max-width: 1200px;
         margin: 0 auto;
         padding: 2rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    main h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        text-align: left;
     }
 
     main h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 2rem;
         text-align: left;
+        color: #444;
     }
 
     /* View Toggle Buttons */
     .view-toggle {
-        justify-content: flex-start;
-        max-width: 400px;
+        display: flex;
+        gap: 1rem;
         margin-bottom: 2rem;
     }
 
     .view-toggle button {
-        padding: 1rem;
+        padding: 0.75rem 1.25rem;
         font-size: 1rem;
+        border: none;
+        background-color: #111;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    .view-toggle button:hover {
+        background-color: #444;
     }
 
     /* Members Section */
@@ -95,37 +121,61 @@
     }
 
     .member-card {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         text-align: left;
+    }
+
+    .member-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .member-card img {
+        width: 80px;
+        height: 80px;
+        object-fit: contain;
+        margin-bottom: 1rem;
     }
 
     .member-card h3 {
         font-size: 1.4rem;
         margin-bottom: 0.5rem;
+        color: #111;
+    }
+
+    .member-card .tagline {
+        font-style: italic;
+        color: #666;
+        margin-bottom: 0.75rem;
     }
 
     .member-card p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 0.25rem;
+        color: #333;
     }
 
     /* Footer split layout */
     footer {
         display: flex;
         justify-content: space-between;
-        /* left, center, right */
         align-items: flex-start;
         padding: 2rem;
         max-width: 1200px;
         margin: 0 auto;
         background-color: #111;
         color: #fff;
+        font-family: 'Poppins', sans-serif;
     }
 
     .footer-left,
     .footer-center,
     .footer-right {
         flex: 1;
-        /* equal width columns */
     }
 
     .footer-left {
@@ -135,7 +185,6 @@
     .footer-center {
         display: flex;
         justify-content: center;
-        /* center icons horizontally */
         align-items: center;
     }
 
@@ -157,35 +206,9 @@
 
     footer .social-icons img:hover {
         transform: scale(1.1);
-        /* subtle hover effect */
     }
 
     footer p {
         font-size: 1rem;
     }
-}
-/* Remove bullets from navigation list */
-#nav-links {
-    list-style: none;
-    /* removes default dots */
-    margin: 0;
-    padding: 0;
-}
-
-#nav-links li {
-    list-style: none;
-    /* ensures no bullets */
-}
-
-#nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-#nav-links a:hover,
-#nav-links a.active {
-    color: #f39c12;
-    /* accent color on hover/active */
 }
