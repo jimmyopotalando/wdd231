@@ -1,0 +1,67 @@
+{
+  "members": [
+    {
+      "name": "Green Valley Bakery",
+      "address": "123 Market Street, Kiungani",
+      "phone": "+254 712 345678",
+      "website": "https://greenvalleybakery.co.ke",
+      "image": "greenvalley.jpg",
+      "membershipLevel": 3,
+      "description": "Artisan breads and pastries made fresh daily."
+    },
+    {
+      "name": "Sunrise Hardware & Supplies",
+      "address": "45 Industrial Road, Kiungani",
+      "phone": "+254 733 987654",
+      "website": "https://sunrisehardware.co.ke",
+      "image": "sunrisehardware.jpg",
+      "membershipLevel": 2,
+      "description": "Building materials, tools, and hardware for contractors and homeowners."
+    },
+    {
+      "name": "Kiungani Medical Clinic",
+      "address": "78 Health Avenue, Kiungani",
+      "phone": "+254 700 112233",
+      "website": "https://kiunganiclinic.org",
+      "image": "clinic.jpg",
+      "membershipLevel": 1,
+      "description": "Community healthcare services with qualified doctors and nurses."
+    },
+    {
+      "name": "Bright Future Academy",
+      "address": "12 Education Lane, Kiungani",
+      "phone": "+254 701 223344",
+      "website": "https://brightfutureacademy.ac.ke",
+      "image": "academy.jpg",
+      "membershipLevel": 3,
+      "description": "Private school offering quality education from kindergarten to high school."
+    },
+    {
+      "name": "Safari Adventures Tours",
+      "address": "9 Explorer Street, Kiungani",
+      "phone": "+254 722 334455",
+      "website": "https://safariadventures.co.ke",
+      "image": "safari.jpg",
+      "membershipLevel": 2,
+      "description": "Tour company specializing in wildlife safaris and cultural experiences."
+    },
+    {
+      "name": "TechHub Solutions",
+      "address": "56 Innovation Drive, Kiungani",
+      "phone": "+254 711 445566",
+      "website": "https://techhubsolutions.co.ke",
+      "image": "techhub.jpg",
+      "membershipLevel": 3,
+      "description": "IT consultancy offering web development, networking, and cloud services."
+    },
+    {
+      "name": "Kiungani Farmers Cooperative",
+      "address": "34 Agriculture Road, Kiungani",
+      "phone": "+254 799 556677",
+      "website": "https://kiunganifarmers.org",
+      "image": "farmers.jpg",
+      "membershipLevel": 1,
+      "description": "Local cooperative supporting farmers with resources, training, and market access."
+    }
+  ]
+}

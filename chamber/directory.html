@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiungani Chamber of Commerce Directory</title>
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Chamber Logo">
+            <h1>Kiungani Chamber of Commerce</h1>
+        </div>
+        <nav>
+            <button id="menu-toggle">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <h2>Business Directory</h2>
+
+        <!-- View toggle buttons -->
+        <div class="view-toggle">
+            <button id="grid-view">Grid View</button>
+            <button id="list-view">List View</button>
+        </div>
+
+        <!-- Members Section -->
+        <section id="members" class="grid">
+            <!-- Example business card -->
+            <div class="member-card">
+                <img src="images/business-logo-placeholder.png" alt="Business Logo">
+                <h3>Rozenval Solutions</h3>
+                <p class="tagline">All Solutions</p>
+                <p>Email: info@rozenvalsolutions.com</p>
+                <p>Phone: +254 740 13187</p>
+                <p>Address: Nairobi, Kenya</p>
+            </div>
+
+            <div class="member-card">
+                <img src="images/business-logo-placeholder.png" alt="Business Logo">
+                <h3>Town Spy Investigators</h3>
+                <p class="tagline">Your Investigative Partner</p>
+                <p>Email: info@townspyinvestigators.com</p>
+                <p>Phone: +254 738 77029</p>
+                <p>Address: Kisumu, Kenya</p>
+            </div>
+
+            <!-- Add more member-card blocks as needed -->
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <p>Kiungani Chamber of Commerce</p>
+            <p>Email: info@kiunganichamber.org</p>
+            <p>Phone: +254 712 345678</p>
+        </div>
+
+        <div class="footer-center">
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p>WDD 231 Class Project</p>
+            <p>Student: Jimmy Opot Alando</p>
+            <p>&copy; <span id="year"></span> Kiungani Chamber of Commerce</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Auto-update year and last modified
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("last-modified").textContent = document.lastModified;
+    </script>
+
+</body>
+
+</html>

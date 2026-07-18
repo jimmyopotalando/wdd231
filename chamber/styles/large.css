@@ -1,0 +1,191 @@
+/* =========================
+   large.css — Desktop Layout
+   ========================= */
+
+@media (min-width: 640px) {
+
+    /* Header */
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+        background-color: #111;
+        /* dark background */
+        color: #fff;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .logo img {
+        width: 50px;
+        height: 50px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    /* Navigation: horizontal beside logo + name */
+    #nav-links {
+        display: flex !important;
+        flex-direction: row;
+        gap: 1.5rem;
+        background: none;
+    }
+
+    #nav-links a {
+        color: #fff;
+        /* visible on dark header */
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    #nav-links a:hover,
+    #nav-links a.active {
+        color: #f39c12;
+        /* accent color on hover/active */
+    }
+
+    #menu-toggle {
+        display: none;
+        /* hide hamburger on desktop */
+    }
+
+    /* Main layout */
+    main {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    main h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    /* View Toggle Buttons */
+    .view-toggle {
+        justify-content: flex-start;
+        max-width: 400px;
+        margin-bottom: 2rem;
+    }
+
+    .view-toggle button {
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    /* Members Section */
+    #members.grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+    }
+
+    #members.list {
+        display: block;
+    }
+
+    .member-card {
+        text-align: left;
+    }
+
+    .member-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .member-card p {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+    }
+
+    /* Footer split layout */
+    footer {
+        display: flex;
+        justify-content: space-between;
+        /* left, center, right */
+        align-items: flex-start;
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #111;
+        color: #fff;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        flex: 1;
+        /* equal width columns */
+    }
+
+    .footer-left {
+        text-align: left;
+    }
+
+    .footer-center {
+        display: flex;
+        justify-content: center;
+        /* center icons horizontally */
+        align-items: center;
+    }
+
+    .footer-right {
+        text-align: right;
+    }
+
+    footer .social-icons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    footer .social-icons img {
+        width: 28px;
+        height: 28px;
+        filter: invert(1);
+        transition: transform 0.3s ease;
+    }
+
+    footer .social-icons img:hover {
+        transform: scale(1.1);
+        /* subtle hover effect */
+    }
+
+    footer p {
+        font-size: 1rem;
+    }
+}
+/* Remove bullets from navigation list */
+#nav-links {
+    list-style: none;
+    /* removes default dots */
+    margin: 0;
+    padding: 0;
+}
+
+#nav-links li {
+    list-style: none;
+    /* ensures no bullets */
+}
+
+#nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+#nav-links a:hover,
+#nav-links a.active {
+    color: #f39c12;
+    /* accent color on hover/active */
+}
