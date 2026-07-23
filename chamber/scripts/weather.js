@@ -1,7 +1,7 @@
 // scripts/weather.js
 // Fetch and display current weather + 3-day forecast for Timbuktu
 
-const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with your actual API key
+const apiKey = '23163ab0e1319019afb7469e82d2d453'; // Replace with your actual API key
 const city = 'Timbuktu';
 const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`;
 
