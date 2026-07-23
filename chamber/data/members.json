@@ -1,67 +1,48 @@
-{
-  "members": [
-    {
-      "name": "Green Valley Bakery",
-      "address": "123 Market Street, Kiungani",
-      "phone": "+254 712 345678",
-      "website": "https://greenvalleybakery.co.ke",
-      "image": "greenvalley.jpg",
-      "membershipLevel": 3,
-      "description": "Artisan breads and pastries made fresh daily."
-    },
-    {
-      "name": "Sunrise Hardware & Supplies",
-      "address": "45 Industrial Road, Kiungani",
-      "phone": "+254 733 987654",
-      "website": "https://sunrisehardware.co.ke",
-      "image": "sunrisehardware.jpg",
-      "membershipLevel": 2,
-      "description": "Building materials, tools, and hardware for contractors and homeowners."
-    },
-    {
-      "name": "Kiungani Medical Clinic",
-      "address": "78 Health Avenue, Kiungani",
-      "phone": "+254 700 112233",
-      "website": "https://kiunganiclinic.org",
-      "image": "clinic.jpg",
-      "membershipLevel": 1,
-      "description": "Community healthcare services with qualified doctors and nurses."
-    },
-    {
-      "name": "Bright Future Academy",
-      "address": "12 Education Lane, Kiungani",
-      "phone": "+254 701 223344",
-      "website": "https://brightfutureacademy.ac.ke",
-      "image": "academy.jpg",
-      "membershipLevel": 3,
-      "description": "Private school offering quality education from kindergarten to high school."
-    },
-    {
-      "name": "Safari Adventures Tours",
-      "address": "9 Explorer Street, Kiungani",
-      "phone": "+254 722 334455",
-      "website": "https://safariadventures.co.ke",
-      "image": "safari.jpg",
-      "membershipLevel": 2,
-      "description": "Tour company specializing in wildlife safaris and cultural experiences."
-    },
-    {
-      "name": "TechHub Solutions",
-      "address": "56 Innovation Drive, Kiungani",
-      "phone": "+254 711 445566",
-      "website": "https://techhubsolutions.co.ke",
-      "image": "techhub.jpg",
-      "membershipLevel": 3,
-      "description": "IT consultancy offering web development, networking, and cloud services."
-    },
-    {
-      "name": "Kiungani Farmers Cooperative",
-      "address": "34 Agriculture Road, Kiungani",
-      "phone": "+254 799 556677",
-      "website": "https://kiunganifarmers.org",
-      "image": "farmers.jpg",
-      "membershipLevel": 1,
-      "description": "Local cooperative supporting farmers with resources, training, and market access."
+// scripts/spotlights.js
+// Load 2–3 random Gold/Silver members from JSON and display them
+
+async function loadSpotlights() {
+  try {
+    const response = await fetch('data/members.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
     }
-  ]
+    const data = await response.json();
+
+    // Access the members array
+    const members = data.members;
+
+    // Filter for Gold (3) and Silver (2) members
+    const premiumMembers = members.filter(m =>
+      m.membershipLevel === 3 || m.membershipLevel === 2
+    );
+
+    // Randomize and select 2–3 members
+    const shuffled = premiumMembers.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, Math.floor(Math.random() * 2) + 2); // 2 or 3
+
+    const container = document.getElementById('spotlight-container');
+    container.innerHTML = '';
+
+    selected.forEach(member => {
+      const card = document.createElement('div');
+      card.classList.add('spotlight-card');
+      card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name} Logo" class="spotlight-logo">
+        <h3>${member.name}</h3>
+        <p><strong>Phone:</strong> ${member.phone}</p>
+        <p><strong>Address:</strong> ${member.address}</p>
+        <p><a href="${member.website}" target="_blank" rel="noopener">Visit Website</a></p>
+        <p><em>Membership Level: ${member.membershipLevel === 3 ? 'Gold' : 'Silver'}</em></p>
+        <p>${member.description}</p>
+      `;
+      container.appendChild(card);
+    });
+  } catch (error) {
+    console.error('Spotlights fetch error:', error);
+    const container = document.getElementById('spotlight-container');
+    container.textContent = 'Unable to load member spotlights.';
+  }
 }
+
+loadSpotlights();

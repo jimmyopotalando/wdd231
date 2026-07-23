@@ -4,13 +4,19 @@
 async function loadSpotlights() {
   try {
     const response = await fetch('data/members.json');
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
     const members = await response.json();
 
-    // Filter for Gold and Silver members
-    const premium = members.filter(m => m.membership === 'Gold' || m.membership === 'Silver');
+    // Filter for Gold and Silver members only
+    const premiumMembers = members.filter(m =>
+      m.membership.toLowerCase() === 'gold' || m.membership.toLowerCase() === 'silver'
+    );
 
-    // Randomize and select 2–3
-    const selected = premium.sort(() => 0.5 - Math.random()).slice(0, 3);
+    // Randomize and select 2–3 members
+    const shuffled = premiumMembers.sort(() => 0.5 - Math.random());
+    const selected = shuffled.slice(0, Math.floor(Math.random() * 2) + 2); // 2 or 3
 
     const container = document.getElementById('spotlight-container');
     container.innerHTML = '';
@@ -19,18 +25,19 @@ async function loadSpotlights() {
       const card = document.createElement('div');
       card.classList.add('spotlight-card');
       card.innerHTML = `
-        <img src="${member.logo}" alt="${member.name} Logo">
+        <img src="${member.logo}" alt="${member.name} Logo" class="spotlight-logo">
         <h3>${member.name}</h3>
-        <p>Phone: ${member.phone}</p>
-        <p>Address: ${member.address}</p>
-        <p><a href="${member.website}" target="_blank">${member.website}</a></p>
-        <p>Membership: ${member.membership}</p>
+        <p><strong>Phone:</strong> ${member.phone}</p>
+        <p><strong>Address:</strong> ${member.address}</p>
+        <p><a href="${member.website}" target="_blank" rel="noopener">Visit Website</a></p>
+        <p><em>Membership: ${member.membership}</em></p>
       `;
       container.appendChild(card);
     });
   } catch (error) {
     console.error('Spotlights fetch error:', error);
-    document.getElementById('spotlight-container').textContent = 'Unable to load member spotlights.';
+    const container = document.getElementById('spotlight-container');
+    container.textContent = 'Unable to load member spotlights.';
   }
 }
 

@@ -54,13 +54,21 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <img src="images/hero.jpg" alt="Timbuktu city view">
+            <picture>
+                <!-- Small screens -->
+                <source srcset="images/hero-small.webp" media="(max-width: 600px)">
+                <!-- Medium screens -->
+                <source srcset="images/hero-medium.webp" media="(max-width: 1024px)">
+                <!-- Default large -->
+                <img src="images/hero-large.webp" alt="Timbuktu city view" width="1200" height="600">
+            </picture>
             <div class="hero-text">
                 <h2>Welcome to Timbuktu Chamber of Commerce</h2>
                 <p>Connecting businesses, growing community.</p>
                 <a href="join.html" class="cta-button">Join Us Today</a>
             </div>
         </section>
+
 
         <!-- Events Section -->
         <section class="events">
