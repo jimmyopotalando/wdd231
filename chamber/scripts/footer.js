@@ -1,3 +1,9 @@
 // scripts/footer.js
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = document.lastModified;
+
+// Dynamically set current year
+const yearSpan = document.getElementById("year");
+yearSpan.textContent = new Date().getFullYear();
+
+// Dynamically set last modified date with label
+const lastModifiedSpan = document.getElementById("last-modified");
+lastModifiedSpan.textContent = `Last Modified: ${document.lastModified}`;

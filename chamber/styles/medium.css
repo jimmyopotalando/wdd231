@@ -6,22 +6,12 @@
 
     /* Header */
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding: 1rem 1.5rem;
-        background-color: #111;
-        color: #fff;
     }
 
     .logo img {
         width: 45px;
         height: 45px;
-    }
-
-    header h1 {
-        font-size: 1.25rem;
-        font-weight: 600;
     }
 
     /* Navigation */
@@ -35,21 +25,16 @@
         flex-direction: row;
         gap: 1rem;
         background: none;
-        list-style: none;
-        margin: 0;
-        padding: 0;
     }
 
     #nav-links a {
-        color: #fff;
-        text-decoration: none;
         font-weight: 500;
         transition: color 0.3s ease;
     }
 
     #nav-links a:hover,
     #nav-links a.active {
-        color: #f39c12;
+        color: var(--secondary-color);
     }
 
     /* Main */
@@ -62,19 +47,16 @@
     main h1 {
         font-size: 1.75rem;
         margin-bottom: 1rem;
-        text-align: center;
     }
 
     main h2 {
         font-size: 1.3rem;
         margin-bottom: 1.5rem;
-        text-align: center;
-        color: #444;
+        color: var(--neutral-mid);
     }
 
     /* View Toggle Buttons */
     .view-toggle {
-        display: flex;
         justify-content: center;
         gap: 1rem;
         margin-bottom: 1.5rem;
@@ -83,21 +65,10 @@
     .view-toggle button {
         padding: 0.75rem 1.25rem;
         font-size: 1rem;
-        border: none;
-        background-color: #111;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-    }
-
-    .view-toggle button:hover {
-        background-color: #444;
     }
 
     /* Members Section */
     #members.grid {
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
         /* 2 columns on tablets */
         gap: 1.25rem;
@@ -108,17 +79,8 @@
     }
 
     .member-card {
-        background-color: #fff;
-        border-radius: 6px;
         padding: 1.25rem;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .member-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     }
 
     .member-card img {
@@ -130,76 +92,27 @@
 
     .member-card h3 {
         font-size: 1.3rem;
-        margin-bottom: 0.5rem;
-        color: #111;
     }
 
     .member-card p {
         font-size: 0.95rem;
-        margin-bottom: 0.25rem;
         color: #333;
     }
 
     /* Hero Section */
-    .hero {
-        position: relative;
-        text-align: center;
-        color: #fff;
-    }
-
-    .hero img {
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-
     .hero-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         max-width: 80%;
-    }
-
-    /* CTA Button — consistent contrast */
-    .cta-button {
-        display: inline-block;
-        padding: 0.75rem 1.25rem;
-        background-color: #004080;
-        /* deep navy */
-        color: #ffffff;
-        /* strong contrast */
-        font-weight: 600;
-        text-decoration: none;
-        border-radius: 6px;
-        margin-top: 1rem;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .cta-button:hover,
-    .cta-button:focus {
-        background-color: #f39c12;
-        /* accent orange */
-        color: #000000;
-        /* black text for contrast */
-        transform: scale(1.05);
-    }
-
-    .cta-button:focus {
-        outline: 3px solid #000000;
-        outline-offset: 2px;
+        /* narrower text block on tablets */
     }
 
     /* Footer */
     footer {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 1.5rem;
         max-width: 900px;
         margin: 0 auto;
-        background-color: #111;
-        color: #fff;
     }
 
     .footer-left,
@@ -207,23 +120,6 @@
     .footer-right {
         flex: 1;
         text-align: center;
-    }
-
-    footer .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-    }
-
-    footer .social-icons img {
-        width: 28px;
-        height: 28px;
-        filter: invert(1);
-        transition: transform 0.3s ease;
-    }
-
-    footer .social-icons img:hover {
-        transform: scale(1.1);
     }
 
     footer p {
@@ -235,15 +131,5 @@
     .weather,
     .spotlights {
         margin: 1.5rem 0;
-    }
-
-    .spotlight-card {
-        background: #fff;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        padding: 1rem;
-        margin-bottom: 1rem;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 }

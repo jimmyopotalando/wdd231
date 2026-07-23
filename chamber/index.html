@@ -27,7 +27,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
     <link rel="stylesheet" href="styles/large.css">
 </head>
 
@@ -37,10 +39,9 @@
     <header>
         <div class="logo">
             <img src="images/logo.png" alt="Chamber Logo">
-            <h1>Timbuktu Chamber of Commerce</h1>
         </div>
         <nav>
-            <button id="menu-toggle">☰</button>
+            <button id="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
             <ul id="nav-links">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="discover.html">Discover</a></li>
@@ -52,14 +53,14 @@
 
     <!-- Main -->
     <main>
+        <!-- Page Title (audit fix: single h1 inside main) -->
+        <h1>Timbuktu Chamber of Commerce</h1>
+
         <!-- Hero Section -->
         <section class="hero">
             <picture>
-                <!-- Small screens -->
                 <source srcset="images/hero-small.webp" media="(max-width: 600px)">
-                <!-- Medium screens -->
                 <source srcset="images/hero-medium.webp" media="(max-width: 1024px)">
-                <!-- Default large -->
                 <img src="images/hero-large.webp" alt="Timbuktu city view" width="1200" height="600">
             </picture>
             <div class="hero-text">
@@ -68,7 +69,6 @@
                 <a href="join.html" class="cta-button">Join Us Today</a>
             </div>
         </section>
-
 
         <!-- Events Section -->
         <section class="events">
@@ -88,9 +88,7 @@
         <!-- Weather Section -->
         <section class="weather">
             <h2>Local Weather</h2>
-            <p id="current-temp"></p>
-            <p id="current-desc"></p>
-            <div id="forecast"></div>
+            <div id="weather"></div>
         </section>
 
         <!-- Spotlights Section -->
