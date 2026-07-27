@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Confirmation - Timbuktu Chamber</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="Confirmation page for Timbuktu Chamber of Commerce membership application.">
+    <meta name="author" content="Jimmy Opot Alando">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Chamber Logo">
+        </div>
+        <nav>
+            <button id="menu-toggle" aria-expanded="false" aria-controls="nav-links">☰</button>
+            <ul id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+        <h1>Application Received</h1>
+        <p>Thank you for applying to join the Timbuktu Chamber of Commerce. Below is a summary of your submitted
+            information:</p>
+
+        <section class="confirmation">
+            <h2>Your Details</h2>
+            <ul>
+                <li><strong>First Name:</strong> <span id="firstname"></span></li>
+                <li><strong>Last Name:</strong> <span id="lastname"></span></li>
+                <li><strong>Organizational Title:</strong> <span id="organization-title"></span></li>
+                <li><strong>Email:</strong> <span id="email"></span></li>
+                <li><strong>Phone:</strong> <span id="phone"></span></li>
+                <li><strong>Business/Organization:</strong> <span id="organization"></span></li>
+                <li><strong>Membership Level:</strong> <span id="membership"></span></li>
+                <li><strong>Description:</strong> <span id="description"></span></li>
+                <li><strong>Submitted At:</strong> <span id="timestamp"></span></li>
+            </ul>
+        </section>
+
+        <p>Our team will review your application and contact you shortly with next steps. We look forward to welcoming
+            you into our community!</p>
+
+        <a href="index.html" class="cta-button">Return to Home</a>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <p>Timbuktu Chamber of Commerce</p>
+            <p>Email: info@timbuktuchamber.org</p>
+            <p>Phone: +254 712 345678</p>
+        </div>
+
+        <div class="footer-center">
+            <div class="social-icons">
+                <a href="#"><img src="images/youtube.png" alt="YouTube Icon"></a>
+                <a href="#"><img src="images/twitter.png" alt="Twitter Icon"></a>
+                <a href="#"><img src="images/linkedin.png" alt="LinkedIn Icon"></a>
+            </div>
+        </div>
+
+        <div class="footer-right">
+            <p>WDD 231 Class Project</p>
+            <p>Student: Jimmy Opot Alando</p>
+            <p>&copy; <span id="year"></span> Timbuktu Chamber of Commerce</p>
+            <p>Last Modified: <span id="last-modified"></span></p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="scripts/main.js" defer></script>
+    <script>
+        // Parse query string and display submitted values
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("firstname").textContent = params.get("firstname") || "";
+        document.getElementById("lastname").textContent = params.get("lastname") || "";
+        document.getElementById("organization-title").textContent = params.get("organization-title") || "";
+        document.getElementById("email").textContent = params.get("email") || "";
+        document.getElementById("phone").textContent = params.get("phone") || "";
+        document.getElementById("organization").textContent = params.get("organization") || "";
+        document.getElementById("membership").textContent = params.get("membership") || "";
+        document.getElementById("description").textContent = params.get("description") || "";
+        document.getElementById("timestamp").textContent = params.get("timestamp") || "";
+    </script>
+</body>
+
+</html>
