@@ -4,15 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Timbuktu Chamber of Commerce - Join</title>
+    <title>Join Timbuktu Chamber of Commerce</title>
 
     <!-- SEO Meta -->
     <meta name="description"
-        content="Apply to join the Timbuktu Chamber of Commerce through our membership application form.">
+        content="Join the Timbuktu Chamber of Commerce and access networking, training, and spotlight opportunities for your business.">
     <meta name="author" content="Jimmy Opot Alando">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Join Timbuktu Chamber of Commerce">
+    <meta property="og:description"
+        content="Apply today and unlock networking, training, and spotlight opportunities for your business.">
+    <meta property="og:image" content="https://jimmyopotalando.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://jimmyopotalando.github.io/wdd231/chamber/join.html">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -45,6 +57,7 @@
         <div class="join-layout">
             <!-- Membership Application Form -->
             <section class="join-form">
+                <h2>Membership Application Form</h2>
                 <form method="get" action="thankyou.html">
                     <label>
                         First Name:
@@ -59,8 +72,7 @@
                     <label>
                         Organizational Title:
                         <input type="text" name="organization-title" autocomplete="organization-title"
-                            pattern="[A-Za-z\s\-]{7,}"
- title="Organization Title (min 7 characters)">
+                            pattern="[A-Za-z\s\-]{3,}" title="Organization Title (min 3 characters)">
                     </label>
 
                     <label>
@@ -104,6 +116,7 @@
 
             <!-- Membership Level Cards -->
             <aside class="membership-cards">
+                <h2>Membership Levels</h2>
                 <div class="card np">
                     <h3>NP Membership</h3>
                     <p>No fee for non-profits.</p>
@@ -188,25 +201,7 @@
 
     <!-- Scripts -->
     <script src="scripts/main.js" defer></script>
-    <script>
-        // Populate timestamp hidden field
-        document.getElementById("timestamp").value = new Date().toISOString();
-
-        // Modal functionality
-        document.querySelectorAll('.card a').forEach(link => {
-            link.addEventListener('click', e => {
-                e.preventDefault();
-                const modal = document.querySelector(link.getAttribute('href'));
-                modal.style.display = 'block';
-            });
-        });
-
-        document.querySelectorAll('.close-modal').forEach(btn => {
-            btn.addEventListener('click', () => {
-                btn.closest('.modal').style.display = 'none';
-            });
-        });
-    </script>
+    <script src="scripts/join.js" defer></script>
 </body>
 
 </html>

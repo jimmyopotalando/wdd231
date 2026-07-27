@@ -4,14 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Application Confirmation - Timbuktu Chamber</title>
+    <title>Application Confirmation - Join Timbuktu Chamber of Commerce</title>
 
     <!-- SEO Meta -->
-    <meta name="description" content="Confirmation page for Timbuktu Chamber of Commerce membership application.">
+    <meta name="description"
+        content="Confirmation page for Timbuktu Chamber of Commerce membership application. Review your submitted details here.">
     <meta name="author" content="Jimmy Opot Alando">
+
+    <!-- Open Graph for social sharing -->
+    <meta property="og:title" content="Application Confirmation - Timbuktu Chamber of Commerce">
+    <meta property="og:description"
+        content="Thank you for applying to join the Timbuktu Chamber of Commerce. Review your submitted details here.">
+    <meta property="og:image" content="https://jimmyopotalando.github.io/wdd231/chamber/images/logo.png">
+    <meta property="og:url" content="https://jimmyopotalando.github.io/wdd231/chamber/thankyou.html">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <link rel="stylesheet" href="styles/normalize.css">
@@ -90,19 +103,7 @@
 
     <!-- Scripts -->
     <script src="scripts/main.js" defer></script>
-    <script>
-        // Parse query string and display submitted values
-        const params = new URLSearchParams(window.location.search);
-        document.getElementById("firstname").textContent = params.get("firstname") || "";
-        document.getElementById("lastname").textContent = params.get("lastname") || "";
-        document.getElementById("organization-title").textContent = params.get("organization-title") || "";
-        document.getElementById("email").textContent = params.get("email") || "";
-        document.getElementById("phone").textContent = params.get("phone") || "";
-        document.getElementById("organization").textContent = params.get("organization") || "";
-        document.getElementById("membership").textContent = params.get("membership") || "";
-        document.getElementById("description").textContent = params.get("description") || "";
-        document.getElementById("timestamp").textContent = params.get("timestamp") || "";
-    </script>
+    <script src="scripts/thankyou.js" defer></script>
 </body>
 
 </html>
