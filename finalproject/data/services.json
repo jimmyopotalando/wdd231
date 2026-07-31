@@ -1,0 +1,107 @@
+[
+  {
+    "id": "corporate",
+    "name": "Corporate Investigations",
+    "description": "Protect businesses from fraud, misconduct, and internal threats.",
+    "category": "Business",
+    "duration": "2-4 weeks"
+  },
+  {
+    "id": "surveillance",
+    "name": "Private Surveillance",
+    "description": "Discreet monitoring to provide clarity in sensitive personal matters.",
+    "category": "Personal",
+    "duration": "Variable"
+  },
+  {
+    "id": "fraud",
+    "name": "Fraud Detection",
+    "description": "Identify and prevent fraudulent activities with expert analysis.",
+    "category": "Financial",
+    "duration": "1-3 weeks"
+  },
+  {
+    "id": "background",
+    "name": "Background Checks",
+    "description": "Comprehensive checks to ensure trust and safety in relationships.",
+    "category": "Verification",
+    "duration": "3-5 days"
+  },
+  {
+    "id": "missing-persons",
+    "name": "Missing Persons",
+    "description": "Locate individuals who have disappeared under suspicious circumstances.",
+    "category": "Personal",
+    "duration": "Variable"
+  },
+  {
+    "id": "employee-screening",
+    "name": "Employee Screening",
+    "description": "Detailed vetting of potential hires to safeguard company integrity.",
+    "category": "Business",
+    "duration": "5-7 days"
+  },
+  {
+    "id": "insurance-fraud",
+    "name": "Insurance Fraud Investigations",
+    "description": "Uncover fraudulent claims and protect insurers from losses.",
+    "category": "Financial",
+    "duration": "2-3 weeks"
+  },
+  {
+    "id": "cybercrime",
+    "name": "Cybercrime Investigations",
+    "description": "Track digital fraud, hacking, and online scams.",
+    "category": "Technology",
+    "duration": "Variable"
+  },
+  {
+    "id": "asset-tracing",
+    "name": "Asset Tracing",
+    "description": "Locate hidden or misappropriated assets for recovery.",
+    "category": "Financial",
+    "duration": "2-6 weeks"
+  },
+  {
+    "id": "marital",
+    "name": "Marital Investigations",
+    "description": "Discreet inquiries into infidelity or trust concerns.",
+    "category": "Personal",
+    "duration": "Variable"
+  },
+  {
+    "id": "litigation-support",
+    "name": "Litigation Support",
+    "description": "Gather evidence and intelligence to strengthen legal cases.",
+    "category": "Legal",
+    "duration": "Variable"
+  },
+  {
+    "id": "security-audit",
+    "name": "Security Audits",
+    "description": "Assess vulnerabilities in corporate or personal security systems.",
+    "category": "Business",
+    "duration": "1-2 weeks"
+  },
+  {
+    "id": "undercover",
+    "name": "Undercover Operations",
+    "description": "Deploy investigators to gather intelligence discreetly.",
+    "category": "Business",
+    "duration": "Variable"
+  },
+  {
+    "id": "financial-due-diligence",
+    "name": "Financial Due Diligence",
+    "description": "Evaluate financial records before mergers or investments.",
+    "category": "Financial",
+    "duration": "2-4 weeks"
+  },
+  {
+    "id": "security-consulting",
+    "name": "Security Consulting",
+    "description": "Provide expert advice on improving safety and risk management.",
+    "category": "Consulting",
+    "duration": "1-2 weeks"
+  }
+]

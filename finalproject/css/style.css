@@ -1,0 +1,205 @@
+/* =========================
+   Global Styles
+   ========================= */
+:root {
+    --primary-color: #1a1a2e;
+    /* Dark navy for headers/nav */
+    --secondary-color: #e94560;
+    /* Accent red for buttons/links */
+    --background-color: #f5f5f5;
+    --text-color: #333;
+    --heading-font: 'Merriweather', serif;
+    --body-font: 'Roboto', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+}
+
+/* =========================
+   Header & Navigation
+   ========================= */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-family: var(--heading-font);
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links a.active,
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* =========================
+   Hero Section
+   ========================= */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(26, 26, 46, 0.8), rgba(26, 26, 46, 0.8)), url('../images/cases/hero-bg.jpg') center/cover no-repeat;
+    color: #fff;
+}
+
+.hero h2 {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    margin-bottom: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #ff6b81;
+}
+
+/* =========================
+   Overview Section
+   ========================= */
+.overview {
+    padding: 2rem;
+    text-align: center;
+}
+
+.overview h2 {
+    font-family: var(--heading-font);
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   Quick Services Grid
+   ========================= */
+.quick-services {
+    padding: 2rem;
+}
+
+.quick-services h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: var(--heading-font);
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-grid article {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-grid h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.service-grid a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-grid a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Footer
+   ========================= */
+footer {
+    background: var(--primary-color);
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   Responsive Design
+   ========================= */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: var(--primary-color);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 1rem;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}

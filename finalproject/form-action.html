@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission | Town Spy Investigators</title>
+    <meta name="description" content="Form submission results for Town Spy Investigators inquiries.">
+    <meta name="author" content="Jimmy Opot Alando">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Fonts & CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Town Spy Investigators Logo">
+                <h1>Town Spy Investigators</h1>
+            </div>
+            <button class="hamburger" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-results">
+            <h2>Form Submission Results</h2>
+            <p>Thank you for reaching out to Town Spy Investigators. Below are the details you submitted:</p>
+
+            <ul>
+                <li><strong>Name:</strong> <span id="result-name"></span></li>
+                <li><strong>Email:</strong> <span id="result-email"></span></li>
+                <li><strong>Service of Interest:</strong> <span id="result-service"></span></li>
+                <li><strong>Additional Details:</strong> <span id="result-message"></span></li>
+            </ul>
+
+            <p><a href="services.html" class="btn">Back to Services</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Town Spy Investigators. All rights reserved.</p>
+        <p><a href="attributions.html">Attributions</a> | <a href="https://youtube.com/your-demo-link"
+                target="_blank">Project Demo Video</a></p>
+    </footer>
+
+    <!-- JavaScript to display query string data -->
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById('result-name').textContent = params.get('name') || 'N/A';
+        document.getElementById('result-email').textContent = params.get('email') || 'N/A';
+        document.getElementById('result-service').textContent = params.get('service') || 'N/A';
+        document.getElementById('result-message').textContent = params.get('message') || 'N/A';
+    </script>
+</body>
+
+</html>
