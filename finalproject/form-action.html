@@ -2,19 +2,39 @@
 <html lang="en">
 
 <head>
+    <!-- Required meta tags -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
     <title>Form Submission | Town Spy Investigators</title>
-    <meta name="description" content="Form submission results for Town Spy Investigators inquiries.">
+
+    <!-- Meta description (50–160 characters) -->
+    <meta name="description"
+        content="View your submitted inquiry details with Town Spy Investigators. We confirm receipt of your request and display the information you provided.">
+
+    <!-- Meta author -->
     <meta name="author" content="Jimmy Opot Alando">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Town Spy Investigators | Form Submission">
+    <meta property="og:description"
+        content="See the details of your submitted inquiry with Town Spy Investigators. Your request has been received and recorded securely.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/wdd231/finalproject/form-action.html">
+    <meta property="og:image" content="https://yourusername.github.io/wdd231/finalproject/images/logo.png">
 
     <!-- Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Fonts & CSS -->
+    <!-- Google Fonts with preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
@@ -35,7 +55,7 @@
 
     <main>
         <section class="form-results">
-            <h2>Form Submission Results</h2>
+            <h1>Form Submission Results</h1>
             <p>Thank you for reaching out to Town Spy Investigators. Below are the details you submitted:</p>
 
             <ul>
@@ -55,8 +75,8 @@
                 target="_blank">Project Demo Video</a></p>
     </footer>
 
-    <!-- JavaScript to display query string data -->
-    <script>
+    <!-- External JavaScript -->
+    <script type="module">
         const params = new URLSearchParams(window.location.search);
         document.getElementById('result-name').textContent = params.get('name') || 'N/A';
         document.getElementById('result-email').textContent = params.get('email') || 'N/A';
