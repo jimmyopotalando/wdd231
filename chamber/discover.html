@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Title -->
+    <title>Timbuktu Chamber of Commerce | Discover</title>
+
+    <!-- Meta description -->
+    <meta name="description"
+        content="Discover Timbuktu: history, demographics, events, and highlights that showcase our vibrant community.">
+
+    <!-- Meta author -->
+    <meta name="author" content="Jimmy Opot Alando">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Discover Timbuktu Chamber of Commerce">
+    <meta property="og:description"
+        content="Explore Timbuktu’s history, demographics, events, and community highlights with the Chamber of Commerce.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jimmyopotalando.github.io/wdd231/chamber/discover.html">
+    <meta property="og:image" content="https://jimmyopotalando.github.io/wdd231/chamber/images/timbuktu-hero.webp">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/logo.png" alt="Timbuktu Chamber Logo">
+                <span class="site-title">Timbuktu Chamber of Commerce</span>
+            </div>
+            <button class="hamburger" aria-label="Menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html" class="active">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Visitor message area -->
+        <section class="visitor-message" id="visitor-message"></section>
+
+        <!-- Grid container for 8 items -->
+        <section class="discover-grid">
+            <!-- Cards will be dynamically injected by discover.js -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Timbuktu Chamber of Commerce. All rights reserved.</p>
+        <p><a href="attributions.html">Attributions</a> |
+            <a href="https://youtube.com/your-demo-link" target="_blank">Project Demo Video</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script type="module" src="js/discover.js"></script>
+</body>
+
+</html>
