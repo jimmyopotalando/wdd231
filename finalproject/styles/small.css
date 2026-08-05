@@ -97,11 +97,6 @@ p {
     /* black text for contrast */
 }
 
-footer a {
-    color: #ff6b6b;
-    /* lighter red for contrast */
-}
-
 /* Sections */
 section {
     padding: 1.5rem 1rem;
@@ -129,6 +124,11 @@ footer {
 }
 
 footer a {
-    color: #e63946;
+    color: #ff6b6b;
+    /* lighter red for contrast */
     text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

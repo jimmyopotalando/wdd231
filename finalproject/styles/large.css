@@ -48,11 +48,13 @@
         max-width: 600px;
     }
 
-        .hero .btn {
-            background: #e63946;
-            color: #000;
-            /* keep consistent */
-        }
+    .hero .btn {
+        background: #e63946;
+        color: #000;
+        /* black text for contrast */
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
 
     /* Services grid */
     .service-grid {
@@ -87,5 +89,15 @@
 
     footer {
         font-size: 0.9rem;
+    }
+
+    footer a {
+        color: #ff6b6b;
+        /* single definition, lighter red for contrast */
+        text-decoration: none;
+    }
+
+    footer a:hover {
+        text-decoration: underline;
     }
 }
