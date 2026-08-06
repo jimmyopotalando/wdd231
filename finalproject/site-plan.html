@@ -4,16 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Site Plan – Final Project</title>
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            /* Dark Gray background */
+            color: #ffffff;
+            /* White text for readability */
+            font-family: 'Open Sans', sans-serif;
             margin: 2rem;
             line-height: 1.6;
         }
 
         h1,
         h2 {
-            color: #2c3e50;
+            color: #e74c3c;
+            /* Red accent for headings */
+            font-family: 'Montserrat', sans-serif;
         }
 
         section {
@@ -29,6 +38,12 @@
             width: 80px;
             height: 80px;
             border: 1px solid #ccc;
+        }
+
+        img.wireframe {
+            max-width: 400px;
+            border: 2px solid #e74c3c;
+            margin: 1rem 0;
         }
     </style>
 </head>
@@ -65,22 +80,24 @@
             <div class="color-box" style="background:#1a1a1a;"></div>
             <div class="color-box" style="background:#e74c3c;"></div>
         </div>
-        <p>Primary: Dark Gray (#1a1a1a) for backgrounds and headers.
+        <p>Primary: Dark Gray (#1a1a1a) for backgrounds and headers.<br>
             Accent: Red (#e74c3c) for buttons, highlights, and call‑to‑action elements.</p>
     </section>
 
     <section>
         <h2>Typography</h2>
-        <p>Headings: <strong>Montserrat</strong> (modern, bold).
-            Body: <strong>Open Sans</strong> (clean, readable).
-            These fonts ensure clarity and professionalism across all pages.</p>
+        <p>Headings: <strong>Montserrat</strong> (modern, bold).<br>
+            Body: <strong>Open Sans</strong> (clean, readable).<br>
+            These fonts are applied directly in this document to demonstrate clarity and professionalism.</p>
     </section>
 
     <section>
         <h2>Wireframe</h2>
-        <p>Wireframes will be hand‑drawn sketches showing both desktop and mobile layouts. The homepage will feature a
-            hero section, navigation bar, service highlights, and a footer with contact details. Mobile view will
-            collapse navigation into a hamburger menu.</p>
+        <p>Wireframes are included below to show both desktop and mobile layouts:</p>
+        <img src="wireframe-desktop.jpg" alt="Desktop Wireframe" class="wireframe">
+        <img src="wireframe-mobile.jpg" alt="Mobile Wireframe" class="wireframe">
+        <p>The desktop layout features a hero section, navigation bar, service highlights, and footer with contact
+            details. The mobile layout collapses navigation into a hamburger menu with stacked sections.</p>
     </section>
 
     <section>
